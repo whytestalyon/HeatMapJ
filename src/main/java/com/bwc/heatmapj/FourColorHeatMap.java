@@ -1,7 +1,5 @@
 package com.bwc.heatmapj;
 
-import org.apache.commons.math3.stat.descriptive.moment.StandardDeviation;
-
 import java.awt.*;
 import java.util.HashSet;
 import java.util.List;
@@ -13,7 +11,6 @@ public class FourColorHeatMap {
     private final double minValue;
     private final double maxValue;
     private final double mean;
-    private final double standardDeviation;
     private final Set<ValuePoint> sourceValues;
     private Color maxPositiveColor = Color.GREEN;
     private Color minPositiveColor = Color.BLUE;
@@ -37,9 +34,6 @@ public class FourColorHeatMap {
                 .mapToDouble(ValuePoint::getDataValue)
                 .average()
                 .getAsDouble();
-
-        standardDeviation = new StandardDeviation()
-                .evaluate(sourceValues.stream().mapToDouble(ValuePoint::getDataValue).toArray());
 
         minValue = sourceValues.stream()
                 .mapToDouble(ValuePoint::getDataValue)
