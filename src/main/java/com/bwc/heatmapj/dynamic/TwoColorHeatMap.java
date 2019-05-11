@@ -1,4 +1,4 @@
-package com.bwc.heatmapj;
+package com.bwc.heatmapj.dynamic;
 
 public class TwoColorHeatMap {
 }

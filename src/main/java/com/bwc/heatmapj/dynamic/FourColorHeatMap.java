@@ -1,4 +1,8 @@
-package com.bwc.heatmapj;
+package com.bwc.heatmapj.dynamic;
+
+import com.bwc.heatmapj.uil.ColorBlender;
+import com.bwc.heatmapj.mod.HeatMapColorPoint;
+import com.bwc.heatmapj.mod.ValuePoint;
 
 import java.awt.*;
 import java.util.HashSet;
